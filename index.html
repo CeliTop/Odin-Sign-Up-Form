@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="left">
+        <img src="./images/light.jpg" alt="old lamp red color" />
+        <div class="title">LightR</div>
+        <div class="credits">
+          Photo by <a href="https://unsplash.com/@scottwebb">Scott Webb </a> on
+          <a href="https://unsplash.com">unsplash.com</a>
+        </div>
+      </div>
+      <div class="right">
+        <div class="header">
+          <p>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. Sign up
+            <em>now</em> to get started.
+          </p>
+          <p>You <em>know</em> you want to.</p>
+        </div>
+
+        <form onsubmit="myFunction(); return false;">
+          <div class="main-formular">
+            <h2>Let's do this !</h2>
+            <div class="inputs">
+              <label for="firstName">
+                <div>First Name</div>
+                <input type="text" name="firstName" id="firstName" />
+              </label>
+              <label for="lastName">
+                <div>Last Name</div>
+                <input type="text" name="lastName" id="lastName" />
+              </label>
+              <label for="email">
+                <div>email</div>
+                <input type="email" name="email" id="email" />
+              </label>
+              <label for="phone">
+                <div>phone number</div>
+                <input
+                  type="tel"
+                  name="phoneNumber"
+                  id="phone"
+                  pattern="0[0-9]{9}"
+                />
+              </label>
+              <label for="password">
+                <div>password</div>
+                <input type="password" name="password" id="password" />
+              </label>
+              <label for="password_confirm">
+                <div>confirm password</div>
+                <input
+                  type="password"
+                  name="passwordConfirm"
+                  id="password_confirm"
+                />
+              </label>
+            </div>
+          </div>
+
+          <label for="submit" class="submit">
+            <button type="submit" id="submit">Create account</button>
+            <div class="have-account">
+              Already have an account ? <a>Log in</a>
+            </div>
+          </label>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

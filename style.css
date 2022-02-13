@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid white;
+}
+
+body {
+  color: white;
+  background-color: rgb(41, 35, 51);
+  font-family: "Rowdies";
+}
+
+main {
+  display: flex;
+}
+
+.left {
+  position: relative;
+  border-right: 2px solid white;
+}
+
+img {
+  height: 100vh;
+  object-fit: cover;
+  max-width: 40vw;
+  display: block;
+}
+
+.left > .title {
+  position: absolute;
+  width: 100%;
+  height: 20vh;
+  top: 20%;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 20vh;
+  font-size: 5.2rem;
+  background: rgb(218, 19, 19);
+  background: linear-gradient(
+    127deg,
+    rgba(218, 19, 19, 0.6) 0%,
+    rgba(196, 52, 198, 0.6) 44%,
+    rgba(94, 10, 238, 0.6) 100%
+  );
+  box-shadow: 0 15px 10px -10px black, 0 -15px 10px -10px black;
+}
+
+.left > .credits {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+}
+
+.header {
+  padding: 1.5em;
+}
+
+.header > p {
+  margin: 1em;
+  text-align: justify;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  text-transform: uppercase;
+}
+
+.main-formular {
+  padding: 2em;
+  background: rgb(218, 19, 19);
+  background: linear-gradient(
+    127deg,
+    rgba(218, 19, 19, 0.6) 0%,
+    rgba(196, 52, 198, 0.6) 44%,
+    rgba(94, 10, 238, 0.6) 100%
+  );
+  box-shadow: 0 8px 10px -10px black, 0 -8px 10px -10px black;
+}
+
+.main-formular > h2 {
+  margin: 0 0 1em 0;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 2em;
+}
+
+input {
+  max-width: 20em;
+  margin-top: 5px;
+}
+
+@media (max-width: 800px) {
+  .inputs {
+    grid-template-columns: repeat(1, auto);
+  }
+  label {
+    margin: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  main {
+    flex-direction: column;
+  }
+
+  img {
+    max-width: 100vw;
+    height: 60vh;
+    object-position: 5%;
+  }
+}
+
+.submit {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+button {
+  height: 2em;
+  width: 10em;
+}
+
+.have-account {
+  margin-top: 0.5em;
+}
