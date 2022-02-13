@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <main>
@@ -39,28 +40,28 @@
             <div class="inputs">
               <label for="firstName">
                 <div>First Name</div>
-                <input type="text" name="firstName" id="firstName" />
+                <input type="text" name="firstName" id="firstName" required />
               </label>
               <label for="lastName">
                 <div>Last Name</div>
-                <input type="text" name="lastName" id="lastName" />
+                <input type="text" name="lastName" id="lastName" required />
               </label>
               <label for="email">
                 <div>email</div>
-                <input type="email" name="email" id="email" />
+                <input type="email" name="email" id="email" required />
               </label>
-              <label for="phone">
+              <label for="phone" class="optional">
                 <div>phone number</div>
                 <input
                   type="tel"
                   name="phoneNumber"
                   id="phone"
-                  pattern="0[0-9]{9}"
+                  pattern="[0-9]{10}"
                 />
               </label>
               <label for="password">
                 <div>password</div>
-                <input type="password" name="password" id="password" />
+                <input type="password" name="password" id="password" required />
               </label>
               <label for="password_confirm">
                 <div>confirm password</div>
@@ -68,13 +69,14 @@
                   type="password"
                   name="passwordConfirm"
                   id="password_confirm"
+                  required
                 />
               </label>
             </div>
           </div>
 
           <label for="submit" class="submit">
-            <button type="submit" id="submit">Create account</button>
+            <input type="submit" id="submit" value="Create account" />
             <div class="have-account">
               Already have an account ? <a>Log in</a>
             </div>

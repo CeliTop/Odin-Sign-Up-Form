@@ -1,9 +1,10 @@
-* {
+html,
+html > * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  display: block;
 }
-
 a {
   color: white;
   text-decoration: none;
@@ -13,12 +14,15 @@ a {
 
 body {
   color: white;
-  background-color: rgb(41, 35, 51);
   font-family: "Rowdies";
+  background-color: red;
+  min-height: 100vh;
 }
 
 main {
   display: flex;
+  background-color: rgb(41, 35, 51);
+  min-height: 100vh;
 }
 
 .left {
@@ -27,7 +31,7 @@ main {
 }
 
 img {
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
   max-width: 40vw;
   display: block;
@@ -75,6 +79,7 @@ img {
 label {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 form {
@@ -100,22 +105,24 @@ form {
 
 .inputs {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, 20vw);
   gap: 2em;
 }
 
 input {
-  max-width: 17em;
   margin-top: 5px;
-  font-size: 1em;
+  font-size: 0.7em;
+  -webkit-appearance: none;
+  outline: none;
+  border: 0;
+  border-radius: 10px;
+  padding: 0.2em 0.4em;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .inputs {
-    grid-template-columns: repeat(1, auto);
-  }
-  label {
-    margin: auto;
+    justify-content: center;
+    grid-template-columns: repeat(1, 80%);
   }
 }
 
@@ -129,14 +136,18 @@ input {
     height: 60vh;
     object-position: 5%;
   }
+
+  .inputs {
+    grid-template-columns: repeat(1, 60vw);
+  }
 }
 
 .submit {
-  margin-top: 2em;
-  margin-left: 2em;
+  padding-top: 2em;
+  padding-left: 2em;
 }
 
-button {
+input[type="submit"] {
   height: 2em;
   width: 10em;
   font-size: 1.6rem;
@@ -145,7 +156,20 @@ button {
 }
 
 .have-account {
-  margin-top: 1em;
-  margin-bottom: 2em;
   font-size: 1.2rem;
+  padding-bottom: 1em;
+}
+
+/* Gestion des inputs */
+.optional::after {
+  content: "(Optional)";
+  position: absolute;
+  right: 0;
+  font-size: 1rem;
+  bottom: -25px;
+  color: rgb(200, 200, 200);
+}
+
+input:invalid {
+  box-shadow: 0 0 5px 5px red;
 }
