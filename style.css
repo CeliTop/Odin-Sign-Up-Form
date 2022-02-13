@@ -42,7 +42,7 @@ img {
   text-align: center;
   vertical-align: middle;
   line-height: 20vh;
-  font-size: 5.2rem;
+  font-size: 5rem;
   background: rgb(218, 19, 19);
   background: linear-gradient(
     127deg,
@@ -57,22 +57,18 @@ img {
   position: absolute;
   bottom: 20px;
   width: 100%;
-  font-size: 0.7rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 
 .right {
   display: flex;
   flex-direction: column;
-  font-size: 1.1rem;
-}
-
-.header {
-  padding: 1.5em;
+  font-size: 1.4rem;
 }
 
 .header > p {
-  margin: 1em;
+  margin: 2em;
   text-align: justify;
 }
 
@@ -99,6 +95,7 @@ form {
 
 .main-formular > h2 {
   margin: 0 0 1em 0;
+  font-size: 2em;
 }
 
 .inputs {
@@ -108,8 +105,9 @@ form {
 }
 
 input {
-  max-width: 20em;
+  max-width: 17em;
   margin-top: 5px;
+  font-size: 1em;
 }
 
 @media (max-width: 800px) {
@@ -134,15 +132,20 @@ input {
 }
 
 .submit {
-  margin-top: 2rem;
-  margin-left: 2rem;
+  margin-top: 2em;
+  margin-left: 2em;
 }
 
 button {
   height: 2em;
   width: 10em;
+  font-size: 1.6rem;
+  font-family: "Rowdies";
+  background: rgb(255, 255, 255);
 }
 
 .have-account {
-  margin-top: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  font-size: 1.2rem;
 }
